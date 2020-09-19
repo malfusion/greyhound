@@ -1,19 +1,13 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import explode
 from pyspark.sql.functions import split
-
-
-
-
+import psycopg2
+import json
 
 spark = SparkSession \
     .builder \
     .appName("KafkaTracesConsumer") \
     .getOrCreate()
-
-spark.sparkContext.addPyFile("dependencies.zip")
-import psycopg2
-
 
 df = spark \
   .readStream \
@@ -22,31 +16,27 @@ df = spark \
   .option("subscribe", "traces") \
   .load()
 
-# query = df.selectExpr("CAST(key AS STRING)", "CAST(value AS STRING)")
-
 class ForeachWriter:
     def open(self, partition_id, epoch_id):
-        
         try:
+            print("PostgreSQL connection is starting")
             self.connection = psycopg2.connect(user="postgres",
                                             password="postgres",
                                             host="postgres",
                                             port="5432",
                                             database="postgres")
-            self.cursor = connection.cursor()
-            self.postgres_insert_query = """ INSERT INTO traces (ID, MODEL, PRICE) VALUES (%s,%s,%s)"""
-            
-        except (Exception, psycopg2.Error) as error :
-            if(self.connection):
-                print("Failed to insert record into mobile table", error)
-
+            print("PostgreSQL connection is started")
+            self.cursor = self.connection.cursor()
+            self.postgres_insert_query = """ INSERT INTO traces (model, price) VALUES (%s,%s)"""
+            return True
+        except Exception as error:
+            print("ERROR:", error)
 
     def process(self, row):
-        print("HERERERE")
-        print(row)
-        record_to_insert = (1, row['somekey'], 950)
+        rowjson = json.loads(row.value.decode('utf-8'))
+        record_to_insert = (rowjson['somekey'], 950)
         self.cursor.execute(self.postgres_insert_query, record_to_insert)
-        connection.commit()
+        self.connection.commit()
 
     def close(self, error):
         if(self.connection):

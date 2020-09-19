@@ -14,7 +14,6 @@ if [ -f "${SPARK_APPLICATION_JAR_LOCATION}" ]; then
         --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.0.1 \
         --class ${SPARK_APPLICATION_MAIN_CLASS} \
         --master ${SPARK_MASTER_URL} \
-        --py-files dependencies.zip \
         ${SPARK_SUBMIT_ARGS} \
         ${SPARK_APPLICATION_JAR_LOCATION} ${SPARK_APPLICATION_ARGS}
 else
@@ -24,7 +23,6 @@ else
         PYSPARK_PYTHON=python3 /spark/bin/spark-submit \
             --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.0.1 \
             --master ${SPARK_MASTER_URL} \
-            --py-files dependencies.zip \
             ${SPARK_SUBMIT_ARGS} \
             ${SPARK_APPLICATION_PYTHON_LOCATION} ${SPARK_APPLICATION_ARGS}
     else
