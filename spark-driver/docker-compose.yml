@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+    spark-app:
+      image: spark-app
+      container_name: spark-app
+      environment:
+        - ENABLE_INIT_DAEMON=false
+      ports:
+        - '4040:4040'
+      networks: 
+        - tracer-net
+networks:
+    tracer-net:
+      external: true
