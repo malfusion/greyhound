@@ -11,6 +11,8 @@ services:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+    networks:
+      - tracer-net
   
   zookeeper:
     image: confluentinc/cp-zookeeper:5.2.0
@@ -21,6 +23,8 @@ services:
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
+    networks:
+      - tracer-net
 
   kafka:
     image: confluentinc/cp-kafka:5.2.0
@@ -36,6 +40,8 @@ services:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    networks:
+      - tracer-net
 
 
   kafka-create-topics:
@@ -50,3 +56,10 @@ services:
     environment:
       KAFKA_BROKER_ID: ignored
       KAFKA_ZOOKEEPER_CONNECT: ignored
+    networks:
+      - tracer-net
+
+networks:
+  tracer-net:
+    external: true
+      
