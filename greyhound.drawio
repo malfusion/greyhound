@@ -1,0 +1,142 @@
+<mxfile modified="2020-09-20T00:13:36.527Z" host="app.diagrams.net" agent="5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36" etag="pTDoOU9oqh9V5cl2qh58" version="13.7.3" type="github">
+  <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
+    <mxGraphModel dx="1186" dy="1600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-44" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=#666666;strokeWidth=1;fillColor=#f5f5f5;align=right;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="250" y="-790" width="900" height="730" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-32" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;align=right;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="320" y="-393" width="760" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-22" value="Service" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#ffe6cc;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="360" y="-353" width="198.79" height="98.25" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-4" value="" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="480" y="-760" width="440" height="307" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-5" value="Spark Cluster" style="rounded=1;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;labelBackgroundColor=none;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="511" y="-718.5" width="210" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-1" value="" style="outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#3334B9;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.rds_postgresql_instance;" vertex="1" parent="1">
+          <mxGeometry x="811" y="-731.5" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-3" value="Spark Master Node" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/apache-128.png" vertex="1" parent="1">
+          <mxGeometry x="596" y="-711.5" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-10" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="cnSYuN0HwNf4v0TLQjy9-42" target="cnSYuN0HwNf4v0TLQjy9-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="610" y="-403" as="sourcePoint" />
+            <mxPoint x="660" y="-453" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="849" y="-620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-12" value="Apache Kafka" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.queue;fillColor=#D9A741;gradientColor=none;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="751" y="-531.5" width="76.56" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-14" value="" style="endArrow=classic;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;rounded=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="cnSYuN0HwNf4v0TLQjy9-12" target="cnSYuN0HwNf4v0TLQjy9-42">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="610" y="-363" as="sourcePoint" />
+            <mxPoint x="660" y="-413" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="788" y="-598" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-17" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="391.21000000000004" y="-338.87" width="57.58" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-21" value="Greyhound Client" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="468.79" y="-353" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-23" value="Service" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#ffe6cc;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="840" y="-353" width="198.79" height="98.25" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-24" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="871.21" y="-338.87" width="57.58" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-25" value="Greyhound Client" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="948.79" y="-353" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-26" value="Service" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#ffe6cc;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="468.79" y="-213" width="198.79" height="98.25" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-27" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="500.00000000000006" y="-198.87" width="57.58" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-28" value="Greyhound Client" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="577.58" y="-213" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-29" value="Service" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#ffe6cc;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="680" y="-213" width="198.79" height="98.25" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-30" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;labelBackgroundColor=none;" vertex="1" parent="1">
+          <mxGeometry x="711.21" y="-198.87" width="57.58" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-31" value="Greyhound Client" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="788.79" y="-213" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-37" value="" style="endArrow=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;rounded=0;strokeWidth=2;strokeColor=#808080;endFill=0;" edge="1" parent="1" source="cnSYuN0HwNf4v0TLQjy9-21" target="cnSYuN0HwNf4v0TLQjy9-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="-443" as="sourcePoint" />
+            <mxPoint x="700" y="-493" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="700" y="-338" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-38" value="" style="endArrow=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;rounded=0;strokeWidth=2;strokeColor=#808080;endFill=0;" edge="1" parent="1" source="cnSYuN0HwNf4v0TLQjy9-25" target="cnSYuN0HwNf4v0TLQjy9-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="568.79" y="-328" as="sourcePoint" />
+            <mxPoint x="710" y="-443" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="994" y="-373" />
+              <mxPoint x="700" y="-373" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-39" value="" style="endArrow=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;rounded=0;strokeWidth=2;strokeColor=#808080;endFill=0;" edge="1" parent="1" source="cnSYuN0HwNf4v0TLQjy9-28" target="cnSYuN0HwNf4v0TLQjy9-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="-443" as="sourcePoint" />
+            <mxPoint x="700" y="-493" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="623" y="-273" />
+              <mxPoint x="700" y="-273" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-40" value="" style="endArrow=none;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;rounded=0;strokeWidth=2;strokeColor=#808080;endFill=0;" edge="1" parent="1" source="cnSYuN0HwNf4v0TLQjy9-31">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="-443" as="sourcePoint" />
+            <mxPoint x="700" y="-453" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="811" y="-273" />
+              <mxPoint x="700" y="-273" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-41" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;rounded=0;strokeWidth=2;strokeColor=#808080;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="cnSYuN0HwNf4v0TLQjy9-4" target="cnSYuN0HwNf4v0TLQjy9-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="821.29" y="-203" as="sourcePoint" />
+            <mxPoint x="710" y="-443" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="700" y="-506" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-42" value="" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeWidth=1;fillColor=#ffffff;align=right;strokeColor=#454545;" vertex="1" parent="1">
+          <mxGeometry x="528.71" y="-643" width="172.58" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-9" value="Spark Worker" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/apache-128.png" vertex="1" parent="1">
+          <mxGeometry x="636" y="-616.5" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cnSYuN0HwNf4v0TLQjy9-36" value="Spark Worker" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/logos-brands-5/24/apache-128.png" vertex="1" parent="1">
+          <mxGeometry x="556.0000000000001" y="-616.5" width="40" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
