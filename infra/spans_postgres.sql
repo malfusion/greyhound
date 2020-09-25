@@ -16,11 +16,12 @@ CREATE SEQUENCE IF NOT EXISTS spans_span_id_seq;
 -- Table Definition
 CREATE TABLE "public"."spans" (
     "span_id" int8 NOT NULL DEFAULT nextval('spans_span_id_seq'::regclass),
+    "parent_span_id" int8,
+    "process_id" int8,
+    "cont_id" int8,
     "start_time" timestamp,
     "end_time" timestamp,
     "tags" json,
-    "cont_id" int8,
-    "parent_span_id" int8,
     PRIMARY KEY ("span_id")
 );
 

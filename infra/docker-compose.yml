@@ -51,7 +51,7 @@ services:
     hostname: kafka-create-topics
     command: "bash -c 'echo Waiting for Kafka to be ready... && \
                        cub kafka-ready -b kafka:9092 1 20 && \
-                       kafka-topics --create --topic traces --if-not-exists --zookeeper zookeeper:2181 --partitions 1 --replication-factor 1 && \
+                       kafka-topics --create --topic spans --if-not-exists --zookeeper zookeeper:2181 --partitions 4 --replication-factor 1 && \
                        sleep infinity'"
     environment:
       KAFKA_BROKER_ID: ignored
